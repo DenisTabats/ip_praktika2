@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сетка на флексах</title>
+    <style>
+        .green-line {
+            display: flex;
+            gap: 15px;
+            height: 260px;
+            margin-bottom: 65px;
+        }
+
+        .green-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .green-item {
+            flex: 1;
+            background-color: #0d3d3d;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .photo-line {
+            display: flex;
+            gap: 22px;
+            height: 460px;
+            width: 100%;
+        }
+
+        .photo-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .photo-column.smaller {
+            flex: 0.5;
+        }
+
+        .picture {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .picture-name {
+            padding: 14px 18px;
+            background-color: rgba(140, 140, 140, 0.5);
+            color: #fff;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="green-line">
+        <div class="green-column">
+            <div class="green-item">1</div>
+            <div class="green-item">2</div>
+            <div class="green-item">3</div>
+        </div>
+        <div class="green-column">
+            <div class="green-item">4</div>
+        </div>
+        <div class="green-column">
+            <div class="green-item">5</div>
+        </div>
+    </div>
+
+    <div class="photo-line">
+        <div class="photo-column smaller">
+            <div class="picture" style="background-image: url('https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop');">
+                <div class="picture-name">Рисунок 1</div>
+            </div>
+            <div class="picture" style="background-image: url('https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop');">
+                <div class="picture-name">Рисунок 2</div>
+            </div>
+            <div class="picture" style="background-image: url('https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=500&h=350&fit=crop');">
+                <div class="picture-name">Рисунок 3</div>
+            </div>
+        </div>
+        
+        <div class="photo-column">
+            <div class="picture" style="background-image: url('https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=500&h=900&fit=crop');">
+                <div class="picture-name">Рисунок 4</div>
+            </div>
+        </div>
+        
+        <div class="photo-column">
+            <div class="picture" style="background-image: url('https://images.pexels.com/photos/552785/pexels-photo-552785.jpeg?auto=compress&cs=tinysrgb&w=500&h=900&fit=crop');">
+                <div class="picture-name">Рисунок 5</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
